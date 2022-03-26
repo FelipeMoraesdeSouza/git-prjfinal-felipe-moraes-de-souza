@@ -59,18 +59,36 @@
 
 				<div class="col-3 mb-3">
 					<article class="cx-home">
-						<a href="<?php echo URL_BASE ."depart/create" ?>" class="btn cx-body">
+						<a href="<?php echo URL_BASE ."produto/create" ?>" class="btn cx-body">
 							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_add-user.svg"></i>
-							<div>cadastro de departamentos</div>
+							<div>cadastrar Produtos</div>
 						</a>
 					</article>
 				</div>
 				
 				<div class="col-3 mb-3">
 					<article class="cx-home">
-						<a href="<?php echo URL_BASE ."depart/lista" ?>" class="btn cx-body">
+						<a href="<?php echo URL_BASE ."produto/lista" ?>" class="btn cx-body">
 							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_numbered-list.svg"></i>
-							<div>Listar departamentos</div>
+							<div>Listar Produtos</div>
+						</a>
+					</article>
+				</div>
+
+				<div class="col-3 mb-3">
+					<article class="cx-home">
+						<a href="<?php echo URL_BASE ."Fornec/create" ?>" class="btn cx-body">
+							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_add-user.svg"></i>
+							<div>cadastrar Fornecedores</div>
+						</a>
+					</article>
+				</div>
+				
+				<div class="col-3 mb-3">
+					<article class="cx-home">
+						<a href="<?php echo URL_BASE ."Fornec/lista" ?>" class="btn cx-body">
+							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_numbered-list.svg"></i>
+							<div>Listar Fornecedores</div>
 						</a>
 					</article>
 				</div>
