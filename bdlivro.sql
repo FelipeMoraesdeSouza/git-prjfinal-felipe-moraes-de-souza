@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Mar-2022 às 00:37
+-- Tempo de geração: 29-Mar-2022 às 00:20
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -76,20 +76,20 @@ INSERT INTO `tbldepart` (`iddepart`, `nomedepart`, `idfunc`) VALUES
 CREATE TABLE `tblestoque` (
   `idproduto` int(11) NOT NULL,
   `produto` varchar(50) NOT NULL,
-  `qnt` int(11) NOT NULL,
-  `qntmax` int(11) NOT NULL,
-  `qntmin` int(11) NOT NULL,
+  `qtd` int(11) NOT NULL,
+  `qtdmax` int(11) NOT NULL,
+  `qtdmin` int(11) NOT NULL,
   `preco` int(11) NOT NULL,
-  `idfornecedor` int(11) NOT NULL
+  `fornecedor` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `tblestoque`
 --
 
-INSERT INTO `tblestoque` (`idproduto`, `produto`, `qnt`, `qntmax`, `qntmin`, `preco`, `idfornecedor`) VALUES
-(1, 'coxinha', 5, 30, 1, 1, 0),
-(2, 'coxinha', 10, 30, 1, 1, 0);
+INSERT INTO `tblestoque` (`idproduto`, `produto`, `qtd`, `qtdmax`, `qtdmin`, `preco`, `fornecedor`) VALUES
+(1, 'coxinha', 5, 30, 1, 1, '0'),
+(3, 'pastel', 7, 30, 1, 3, '0');
 
 -- --------------------------------------------------------
 
@@ -98,9 +98,18 @@ INSERT INTO `tblestoque` (`idproduto`, `produto`, `qnt`, `qntmax`, `qntmin`, `pr
 --
 
 CREATE TABLE `tblfornecedores` (
-  `idfornec` int(11) NOT NULL,
+  `idF` int(11) NOT NULL,
+  `cnpj` varchar(50) NOT NULL,
   `fornecedor` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `tblfornecedores`
+--
+
+INSERT INTO `tblfornecedores` (`idF`, `cnpj`, `fornecedor`) VALUES
+(2, '99999999', 'cha de trovão'),
+(3, '99999999', 'chá de trovão');
 
 -- --------------------------------------------------------
 
@@ -112,7 +121,7 @@ CREATE TABLE `tblfunc` (
   `idfunc` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `cargo` varchar(30) NOT NULL,
-  `iddepart` int(11) NOT NULL,
+  `iddepart` varchar(50) NOT NULL,
   `salario` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -121,9 +130,9 @@ CREATE TABLE `tblfunc` (
 --
 
 INSERT INTO `tblfunc` (`idfunc`, `nome`, `cargo`, `iddepart`, `salario`) VALUES
-(1, 'felipe', 'php', 0, 3000),
-(2, 'felipe', 'php', 0, 3000),
-(3, 'felipe', 'php', 2, 3000);
+(1, 'felipe', 'php', '0', 3000),
+(2, 'felipe', 'php', '0', 3000),
+(3, 'felipe', 'php', '2', 3000);
 
 -- --------------------------------------------------------
 
@@ -171,6 +180,12 @@ ALTER TABLE `tblestoque`
   ADD PRIMARY KEY (`idproduto`);
 
 --
+-- Índices para tabela `tblfornecedores`
+--
+ALTER TABLE `tblfornecedores`
+  ADD PRIMARY KEY (`idF`);
+
+--
 -- Índices para tabela `tblfunc`
 --
 ALTER TABLE `tblfunc`
@@ -196,7 +211,13 @@ ALTER TABLE `tblclientes`
 -- AUTO_INCREMENT de tabela `tblestoque`
 --
 ALTER TABLE `tblestoque`
-  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `tblfornecedores`
+--
+ALTER TABLE `tblfornecedores`
+  MODIFY `idF` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tblfunc`

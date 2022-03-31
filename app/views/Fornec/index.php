@@ -5,7 +5,9 @@
 		<div>
 			<div class="text-end d-flex">
 				<a href="<?php echo URL_BASE."fornec/create" ?>" class="btn btn-verde d-inline-block mb-2 mx-1"><i class="fas fa fa-plus-circle" aria-hidden="true"></i> Cadastrar fornec</a>
+				<!--
 				<a href="" class="btn btn-azul d-inline-block mb-2 filtro"><i class="fas fa fa-filter" aria-hidden="true"></i> Filtrar</a>
+				-->
 			</div>
 		</div>
         <!--

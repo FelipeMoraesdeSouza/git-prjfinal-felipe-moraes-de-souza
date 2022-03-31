@@ -14,6 +14,7 @@
 						</div>
 					</article>
 				</div>
+				
 				<div class="col-3 mb-3">
 					<article class="cx-home excluido">
 						<div class="cx-body">
@@ -43,7 +44,7 @@
 					<article class="cx-home">
 						<a href="<?php echo URL_BASE ."cliente/create" ?>" class="btn cx-body">
 							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_add-user.svg"></i>
-							<div>cadastro</div>
+							<div>cadastro de clientes</div>
 						</a>
 					</article>
 				</div>
@@ -92,7 +93,43 @@
 						</a>
 					</article>
 				</div>
-			
+				
+				<div class="col-3 mb-3">
+					<article class="cx-home">
+						<a href="<?php echo URL_BASE ."Func/create" ?>" class="btn cx-body">
+							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_add-user.svg"></i>
+							<div>cadastrar Funcionarios</div>
+						</a>
+					</article>
+				</div>
+				
+				<div class="col-3 mb-3">
+					<article class="cx-home">
+						<a href="<?php echo URL_BASE ."Func/lista" ?>" class="btn cx-body">
+							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_numbered-list.svg"></i>
+							<div>Listar Funcionarios</div>
+						</a>
+					</article>
+				</div>
+
+				<div class="col-3 mb-3">
+					<article class="cx-home">
+						<a href="<?php echo URL_BASE ."venda/create" ?>" class="btn cx-body">
+							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_add-user.svg"></i>
+							<div>cadastrar venda</div>
+						</a>
+					</article>
+				</div>
+				
+				<div class="col-3 mb-3">
+					<article class="cx-home">
+						<a href="<?php echo URL_BASE ."venda/lista" ?>" class="btn cx-body">
+							<i><img src="<?php echo URL_BASE ?>/assets/img/icons8_numbered-list.svg"></i>
+							<div>Listar vendas</div>
+						</a>
+					</article>
+				</div>
+
 			</div>
 		</div>		
 	</div>

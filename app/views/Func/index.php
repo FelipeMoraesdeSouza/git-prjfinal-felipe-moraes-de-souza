@@ -1,10 +1,10 @@
 
 <section class="caixa mt-4">
-	<div class="titulo h5 mb-0"> <h2>Lista de clientes</h2></div>
+	<div class="titulo h5 mb-0"> <h2>Lista de funcionário</h2></div>
 	<div class="base-lista">
 		<div>
 			<div class="text-end d-flex">
-				<a href="<?php echo URL_BASE."cliente/create" ?>" class="btn btn-verde d-inline-block mb-2 mx-1"><i class="fas fa fa-plus-circle" aria-hidden="true"></i> Cadastrar cliente</a>
+				<a href="<?php echo URL_BASE."func/create" ?>" class="btn btn-verde d-inline-block mb-2 mx-1"><i class="fas fa fa-plus-circle" aria-hidden="true"></i> Cadastrar funcionário</a>
 				<!--
 				<a href="" class="btn btn-azul d-inline-block mb-2 filtro"><i class="fas fa fa-filter" aria-hidden="true"></i> Filtrar</a>
 				-->
@@ -40,21 +40,21 @@
 				<tr>
 				<th align="left">ID</th>
 				<th align="left">Nome</th>
-				<th align="left">tel</th>
-				<th align="center">Telefone</th>
+				<th align="left">cargo</th>
+				<th align="left">salário</th>
 				<th align="center">Ação</th>
 				</tr>
 			</thead> 
 			<tbody>
-				<?php  foreach($lista as $cliente) { ?>
+				<?php  foreach($lista as $func) { ?>
 				<tr>
-					<td><?php echo $cliente->idcliente; ?></td>
-					<td><?php echo $cliente->cliente; ?></td>
-					<td><?php echo $cliente->tel; ?></td>
-					<td align="center"><?php echo $cliente->email; ?></td>
+					<td><?php echo $func->idfunc; ?></td>
+					<td><?php echo $func->nome;      ?></td>
+					<td><?php echo $func->cargo;     ?></td>
+					<td><?php echo $func->salario;   ?></td>
 					<td align="center">
-						<a href="<?php echo URL_BASE."cliente/edit/".$cliente->idcliente ?>" class="btn btn-editar" title="Editar"></a>
-						<a href="<?php echo URL_BASE."cliente/excluir/".$cliente->idcliente ?>" class="btn btn-exlcuir" title="excluir"></a>
+						<a href="<?php echo URL_BASE."func/edit/".$func->idfunc ?>" class="btn btn-editar" title="Editar"></a>
+						<a href="<?php echo URL_BASE."func/excluir/".$func->idfunc ?>" class="btn btn-exlcuir" title="excluir"></a>
 					</td>
 				</tr>
 				<?php } ?>	
