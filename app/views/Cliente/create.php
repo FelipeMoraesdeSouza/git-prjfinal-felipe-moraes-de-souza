@@ -2,7 +2,7 @@
 	<div class="titulo h5 mb-0"><h2>Formulario de cadastro</h2></div>
 		<div class="base-form">
 			<div class="caixa-form">
-				<form action="<?php echo URL_BASE."cliente/salvar" ?>" method="POST">				
+				<form id="form" action="<?php echo URL_BASE."cliente/salvar" ?>" method="POST">				
 					<div class="rows">
 						<div class="col-12 d-flex text-justify-center">
 							<span href="" class="msg msg-verde mx-3"><i class="fas fa-check"></i> Cadastro realizado com sucesso <a href="javascrip:;" onclick="fecharMsg()" class="fas fa-times float-right"></a></span>
@@ -10,7 +10,8 @@
 		
 						</div>				
 					</div>				
-					<div class="rows msg-form">	
+					<div class="rows msg-form">
+						<!--	
 						<div class="col-3 position-relative">
 
 							<img src="img/img-usuario.png" class="img-fluido foto">
@@ -20,6 +21,7 @@
 							<small class="d-block text-center pt-1 pb-2"><b>nome_do_arquivo.jpg</b></small>
 						
 						</div>
+						-->
 						
 						<div class="col-9">
 
@@ -45,7 +47,7 @@
 
 							<div class="col-4 m-auto">
 								<input type="hidden" name="idcliente" value="<?php echo isset($cliente) ? $cliente->idcliente : null ?>" />
-								<input type="submit" value="Cadastrar" class="btn btn-verde width-100">
+								<input type="button" id="botao" value="Cadastrar" class="btn btn-verde width-100">
 							</div>
 						
 						</div>

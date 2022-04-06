@@ -10,7 +10,8 @@
 		
 						</div>				
 					</div>				
-					<div class="rows msg-form">	
+					<div class="rows msg-form">
+						<!--	
 						<div class="col-3 position-relative">
 
 							<img src="img/img-usuario.png" class="img-fluido foto">
@@ -20,6 +21,7 @@
 							<small class="d-block text-center pt-1 pb-2"><b>nome_do_arquivo.jpg</b></small>
 						
 						</div>
+						-->
 						
 						<div class="col-9">
 
